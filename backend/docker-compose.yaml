@@ -1,0 +1,17 @@
+version: "3"
+services:
+  db:
+    image: mysql:latest
+    container_name: mysql-pepvagas
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: SnFlaA9BAVCXNBZVtmOS4kgZlspmHNgeAVTcVS
+      MYSQL_DATABASE: db_pepvagas
+      MYSQL_USER: root
+      MYSQL_PASSWORD: SnFlaA9BAVCXNBZVtmOS4kgZlspmHNgeAVTcVS
+    volumes:
+      - ./dados:/var/lib/mysql
+    ports:
+      - "3308:3306"
+volumes:
+    dados:
